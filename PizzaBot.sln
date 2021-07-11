@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PizzaBot", "PizzaBot\PizzaBot.csproj", "{0FF8C032-5464-44B8-8B87-7142C8AF304E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaBotTest", "PizzaBotTest\PizzaBotTest.csproj", "{E5647B7B-347A-49AB-8E83-E9BEFC47E999}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PizzaBotTest", "PizzaBotTest\PizzaBotTest.csproj", "{E5647B7B-347A-49AB-8E83-E9BEFC47E999}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
