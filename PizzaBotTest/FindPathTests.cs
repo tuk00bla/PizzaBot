@@ -19,7 +19,7 @@ namespace PizzaBotTest
         }
 
         [TestMethod]
-        public void FindPathWothTwoEqualPoints()
+        public void FindPathWithTwoEqualPoints()
         {
             string points = "4x4 (2, 4) (2, 4)";
 
