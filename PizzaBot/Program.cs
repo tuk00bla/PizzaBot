@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-
 
 namespace PizzaBot
 {
@@ -13,6 +11,6 @@ namespace PizzaBot
             Console.WriteLine(path);
             Console.ReadKey(); // for debug
         }
-            
+
     }
 }

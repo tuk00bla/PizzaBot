@@ -10,10 +10,10 @@ namespace PizzaBotTest
         public void ParseBoundWrongNumbers()
         {
             string bound = "xX12";
-      
+
             Bound expected = null;
             var result = BotActions.ParseBound(bound);
-            
+
             Assert.AreEqual(expected, result);
         }
 

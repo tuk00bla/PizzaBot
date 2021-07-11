@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PizzaBot;
+
 namespace PizzaBotTest
 {
 
@@ -7,10 +8,9 @@ namespace PizzaBotTest
     public class FindPathTests
     {
         [TestMethod]
-        public void ParseNotNullPoints()
+        public void FindPathWithNotNullPoints()
         {
-            string points = "(2, 4) (3, 1) (4, 4), (0, 0)";
-            Bound exampleBound = new(5, 5);
+            string points = "4x4 (2, 4) (3, 1) (4, 4), (0, 0)";
 
             string expected = "EENNNNDESSSDENNNDWWWWSSSSD";
             var result = BotActions.FindPath(points);
@@ -19,12 +19,33 @@ namespace PizzaBotTest
         }
 
         [TestMethod]
-        public void ParseNotNullPoints2()
+        public void FindPathWothTwoEqualPoints()
         {
-            string points = "(0, 0) (3, 1) ";
-            Bound exampleBound = new(5, 5);
+            string points = "4x4 (2, 4) (2, 4)";
 
-            string expected = "EENNNNDESSSDENNNDWWWWSSSSD";
+            string expected = "EENNNNDD";
+            var result = BotActions.FindPath(points);
+
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void FindPathWithZeroDistance()
+        {
+            string points = "4x4 (0, 0) (0, 0)";
+
+            string expected = "DD";
+            var result = BotActions.FindPath(points);
+
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void FindPathWithOnePoint()
+        {
+            string points = "5x5 (0, 0)";
+
+            string expected = "D";
             var result = BotActions.FindPath(points);
 
             Assert.AreEqual(expected, result);
