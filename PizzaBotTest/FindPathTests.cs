@@ -7,7 +7,7 @@ namespace PizzaBotTest
     public class FindPathTests
     {
         [TestMethod]
-        public void ParsePoints()
+        public void ParseNotNullPoints()
         {
             string points = "(2, 4) (3, 1) (4, 4), (0, 0)";
             Bound exampleBound = new(5, 5);
@@ -19,13 +19,13 @@ namespace PizzaBotTest
         }
 
         [TestMethod]
-        public void ParseZeroPoints()
+        public void ParseNotNullPoints2()
         {
-            string points = "";
+            string points = "(0, 0) (3, 1) ";
             Bound exampleBound = new(5, 5);
 
-            Point expected = null;
-            var result = BotActions.ParsePoints(points, exampleBound);
+            string expected = "EENNNNDESSSDENNNDWWWWSSSSD";
+            var result = BotActions.FindPath(points);
 
             Assert.AreEqual(expected, result);
         }
